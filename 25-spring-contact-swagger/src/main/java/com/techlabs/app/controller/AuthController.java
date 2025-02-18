@@ -17,7 +17,7 @@ import com.techlabs.app.service.AuthService;
 
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/auth") 
 public class AuthController {
 
     private AuthService authService;
