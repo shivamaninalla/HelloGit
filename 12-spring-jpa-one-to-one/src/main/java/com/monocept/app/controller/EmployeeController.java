@@ -25,8 +25,8 @@ public class EmployeeController {
 		super();
 		this.employeeService = employeeService;
 	}
-	
-	@GetMapping()
+      	
+   	@GetMapping()
 	public List<Employee> getAllEmployees(){
 		return employeeService.findAllEmployees();
 		
@@ -45,6 +45,7 @@ public class EmployeeController {
 	public Employee getEmployeeById(@PathVariable int id) {
 		return employeeService.findEmployeeById(id);
 	}
+
 	
 	@GetMapping("address/{id}")
 	public Address getEmployeeByAddress(@PathVariable int id) {

@@ -47,7 +47,7 @@ public class CustomerResponseExceptionHandler {
     public ResponseEntity<CustomerErrorResponse> handleException(AllExceptions.UserNotFoundException exc) {
         return buildResponseEntity(exc, HttpStatus.NOT_FOUND);
     }
-
+ 
     @ExceptionHandler(AllExceptions.CustomerAlreadyAssignedException.class)
     public ResponseEntity<CustomerErrorResponse> handleException(AllExceptions.CustomerAlreadyAssignedException exc) {
         return buildResponseEntity(exc, HttpStatus.BAD_REQUEST);

@@ -20,7 +20,7 @@ public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long accountNumber;
-
+    
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "bank_id")
 	private Bank bank;

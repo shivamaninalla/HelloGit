@@ -19,5 +19,5 @@ public class State {
     @OneToMany(mappedBy = "state", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<City> cities;
 
-    // Getters and Setters
+private Boolean isActive; 
 }

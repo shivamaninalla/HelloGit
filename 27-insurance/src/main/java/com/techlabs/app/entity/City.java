@@ -15,12 +15,10 @@ public class City {
 
     private String city_name;
 
-//    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    private Set<User> users;
 
     @ManyToOne
     @JoinColumn(name = "state_id", nullable = false)    
     private State state;
 
-    // Getters and Setters
+    private Boolean isActive; 
 }

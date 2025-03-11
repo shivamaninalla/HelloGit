@@ -27,9 +27,9 @@ public class AgentRequestDto {
     
     private boolean isActive=true;
     
-    private long city_id;
+    private Long city_id;
     
-    private long state_id;
+    private Long state_id;
     
 
 

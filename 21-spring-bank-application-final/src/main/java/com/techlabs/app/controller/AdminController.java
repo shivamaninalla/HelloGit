@@ -32,11 +32,11 @@ import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("api/admin")
-@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasRole('ADMIN')")  
 @CrossOrigin(origins = "http://localhost:3000")
 public class AdminController {
 	BankService bankService;
-
+    
 	public AdminController(BankService bankService) {
 		super();
 		this.bankService = bankService;
@@ -49,7 +49,7 @@ public class AdminController {
 		return new ResponseEntity<UserResponseDto>(bankService.createCustomer(customerRequestDto, userID),
 				HttpStatus.ACCEPTED);
 	}
-
+	
 	@Operation(summary = "Create Account")
 	@PostMapping("{cid}/account/{bid}")
 	public ResponseEntity<CustomerResponseDto> createAccount(@PathVariable(name = "cid") long cid,
@@ -68,8 +68,8 @@ public class AdminController {
 		return new ResponseEntity<PagedResponse<CustomerResponseDto>>(customer, HttpStatus.ACCEPTED);
 	}
 
-	@Operation(summary = "View Customer By Id")
-	@GetMapping("/{id}")
+ 	@Operation(summary = "View Customer By Id")
+  	@GetMapping("/{id}")
 	public ResponseEntity<CustomerResponseDto> viewCustomerbyId(@PathVariable(name = "id") long id) {
 		return new ResponseEntity<CustomerResponseDto>(bankService.findCustomerByid(id), HttpStatus.OK);
 	}

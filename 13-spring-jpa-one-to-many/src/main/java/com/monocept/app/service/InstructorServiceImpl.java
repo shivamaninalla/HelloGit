@@ -85,7 +85,7 @@ public class InstructorServiceImpl implements InstructorService{
 	public Instructor addCourseToInstructor(int instructorId, int courseId) {
 		Instructor instructor = instructorRepository.findById(instructorId).orElse(null);
 		if(instructor!=null) {
-			Course course = courseRepository.findById(courseId).orElse(null);
+		 	Course course = courseRepository.findById(courseId).orElse(null);
 			if(course!=null) {
 				if(course.getInstructor()==null) {
 					instructor.addCourse(course);

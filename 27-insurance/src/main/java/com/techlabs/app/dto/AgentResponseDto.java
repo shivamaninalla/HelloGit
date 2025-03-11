@@ -1,9 +1,7 @@
 package com.techlabs.app.dto;
 
 import java.util.List;
-import java.util.Set;
 
-import com.techlabs.app.entity.City;
 import com.techlabs.app.entity.Commission;
 import com.techlabs.app.entity.Customer;
 
@@ -20,7 +18,7 @@ public class AgentResponseDto {
 
 	private String phoneNumber;
 
-	private City city;
+	private CityResponseDto city;
 
 //	private Set<Customer> customers;
 	private List<Customer> customers;
