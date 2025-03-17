@@ -11,6 +11,7 @@ public class HH {
 	public static void main(String[] args) {
 		int a=10;
 		
+		
 		System.out.println(a);
 //		SpringApplication.run(HelloGitApplication.class, args);
 	}
